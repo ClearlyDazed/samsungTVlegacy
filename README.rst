@@ -229,3 +229,4 @@ the only implementation. Here is the list of things that inspired samsungctl.
 - https://gist.github.com/danielfaust/998441
 - https://github.com/Bntdumas/SamsungIPRemote
 - https://github.com/kyleaa/homebridge-samsungtv2016
+- https://github.com/Ape/samsungctl

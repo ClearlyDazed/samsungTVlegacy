@@ -1,3 +1,5 @@
+Forked from Ape/samsungctl github
+
 ==========
 samsungctl
 ==========
@@ -208,6 +210,9 @@ KEY_8              8
 KEY_9              9
 KEY_DTV            TV Source
 KEY_HDMI           HDMI Source
+KEY_HDMI2          HDMI2
+KEY_HDMI3          HDMI3
+KEY_HDMI4          HDMI4
 KEY_CONTENTS       SmartHub
 =================  ============
 

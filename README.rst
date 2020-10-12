@@ -1,3 +1,5 @@
+Forked from Ape/samsungctl github
+
 ==========
 samsungctl
 ==========
@@ -208,6 +210,9 @@ KEY_8              8
 KEY_9              9
 KEY_DTV            TV Source
 KEY_HDMI           HDMI Source
+KEY_HDMI2          HDMI2
+KEY_HDMI3          HDMI3
+KEY_HDMI4          HDMI4
 KEY_CONTENTS       SmartHub
 =================  ============
 
@@ -224,3 +229,4 @@ the only implementation. Here is the list of things that inspired samsungctl.
 - https://gist.github.com/danielfaust/998441
 - https://github.com/Bntdumas/SamsungIPRemote
 - https://github.com/kyleaa/homebridge-samsungtv2016
+- https://github.com/Ape/samsungctl

@@ -1,4 +1,5 @@
-Forked from Ape/samsungctl github 
+Forked from Ape/samsungctl github
+
 With additional mapping for key codes
 
 ==========
@@ -94,7 +95,7 @@ bundled with the source as `samsungctl-plus.conf <samsungctl-plus.conf>`_.
 Library usage
 =============
 
-samsungctl can be imported as a Python 3 library:
+samsungctl-plus can be imported as a Python 3 library:
 
 .. code-block:: python
 
@@ -209,13 +210,26 @@ KEY_6              6
 KEY_7              7
 KEY_8              8
 KEY_9              9
-KEY_DTV            TV Source
-KEY_HDMI           HDMI Source
-KEY_HDMI1          HDMI1
-KEY_HDMI2          HDMI2
-KEY_HDMI3          HDMI3
-KEY_HDMI4          HDMI4
 KEY_CONTENTS       SmartHub
+KEY_FM_RADIO       FM Radio Source
+KEY_TV             TV Source
+KEY_DTV            Digital TV Source
+KEY_ANTENA         Analog TV Source
+KEY_DVI            DVI Source
+KEY_DVR            DVR Source
+KEY_HDMI           HDMI Source
+KEY_HDMI1          HDMI 1 Source
+KEY_HDMI2          HDMI 2 Source
+KEY_HDMI3          HDMI 3 Source
+KEY_HDMI4          HDMI 4 Source
+KEY_AV1            AV 1 Source
+KEY_AV2            AV 2 Source
+KEY_AV3            AV 3 Source
+KEY_SVIDEO1        S Video 1 Source
+KEY_SVIDEO2        S Video 2 Source
+KEY_SVIDEO3        S Video 3 Source
+KEY_COMPONENTS1     Component 1 Source
+KEY_COMPONENTS2     Component 2 Source
 =================  ============
 
 Please note that some codes are different on the 2016+ TVs. For example,

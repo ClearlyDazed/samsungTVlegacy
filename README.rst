@@ -1,6 +1,6 @@
 Forked from Ape/samsungctl github
 
-With additional mapping for key codes
+With additional mapping for key codes from kdschlosser/samsungctl
 
 ==========
 samsungctl-plus

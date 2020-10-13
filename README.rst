@@ -1,10 +1,11 @@
 Forked from Ape/samsungctl github
+Added additional mapping for key codes
 
 ==========
-samsungctl
+samsungctl-plus
 ==========
 
-samsungctl is a library and a command line tool for remote controlling Samsung
+samsungctl-plus is a library and a command line tool for remote controlling Samsung
 televisions via a TCP/IP connection. It currently supports both pre-2016 TVs as
 well most of the modern Tizen-OS TVs with Ethernet or Wi-Fi connectivity.
 
@@ -18,11 +19,11 @@ Dependencies
 Installation
 ============
 
-samsungctl can be installed using `pip <(https://pip.pypa.io/>`_:
+samsungctl-plus can be installed using `pip <(https://pip.pypa.io/>`_:
 
 ::
 
-    # pip install samsungctl
+    # pip install samsungctl-plus
 
 Alternatively you can clone the Git repository and run:
 
@@ -34,16 +35,16 @@ It's possible to use the command line tool without installation:
 
 ::
 
-    $ python -m samsungctl
+    $ python -m samsungctl-plus
 
 Command line usage
 ==================
 
-You can use ``samsungctl`` command to send keys to a TV:
+You can use ``samsungctl-plus`` command to send keys to a TV:
 
 ::
 
-    $ samsungctl --host <host> [options] <key> [key ...]
+    $ samsungctl-plus --host <host> [options] <key> [key ...]
 
 ``host`` is the hostname or IP address of the TV. ``key`` is a key code, e.g.
 ``KEY_VOLDOWN``. See `Key codes`_.
@@ -52,17 +53,17 @@ There is also an interactive mode (ncurses) for sending the key presses:
 
 ::
 
-    $ samsungctl --host <host> [options] --interactive
+    $ samsungctl-plus --host <host> [options] --interactive
 
-Use ``samsungctl --help`` for more information about the command line
+Use ``samsungctl-plus --help`` for more information about the command line
 arguments:
 
 ::
 
-    usage: samsungctl [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
-                      [--method METHOD] [--name NAME] [--description DESC]
-                      [--id ID] [--timeout TIMEOUT]
-                      [key [key ...]]
+    usage: samsungctl-plus [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
+                           [--method METHOD] [--name NAME] [--description DESC]
+                           [--id ID] [--timeout TIMEOUT]
+                           [key [key ...]]
 
     Remote control Samsung televisions via TCP/IP connection
 
@@ -83,12 +84,12 @@ arguments:
       --id ID             remote control id
       --timeout TIMEOUT   socket timeout in seconds (0 = no timeout)
 
-    E.g. samsungctl --host 192.168.0.10 --name myremote KEY_VOLDOWN
+    E.g. samsungctl-plus --host 192.168.0.10 --name myremote KEY_VOLDOWN
 
 The settings can be loaded from a configuration file. The file is searched from
-``$XDG_CONFIG_HOME/samsungctl.conf``, ``~/.config/samsungctl.conf``, and
-``/etc/samsungctl.conf`` in this order. A simple default configuration is
-bundled with the source as `samsungctl.conf <samsungctl.conf>`_.
+``$XDG_CONFIG_HOME/samsungctl-plus.conf``, ``~/.config/samsungctl-plus.conf``, and
+``/etc/samsungctl-plus.conf`` in this order. A simple default configuration is
+bundled with the source as `samsungctl-plus.conf <samsungctl-plus.conf>`_.
 
 Library usage
 =============
@@ -97,14 +98,14 @@ samsungctl can be imported as a Python 3 library:
 
 .. code-block:: python
 
-    import samsungctl
+    import samsungctl-plus
 
 A context managed remote controller object of class ``Remote`` can be
 constructed using the ``with`` statement:
 
 .. code-block:: python
 
-    with samsungctl.Remote(config) as remote:
+    with samsungctl-plus.Remote(config) as remote:
         # Use the remote object
 
 The constructor takes a configuration dictionary as a parameter. All
@@ -148,11 +149,11 @@ This simple program opens and closes the menu a few times.
 
     #!/usr/bin/env python3
 
-    import samsungctl
+    import samsungctl-plus
     import time
 
     config = {
-        "name": "samsungctl",
+        "name": "samsungctl-plus",
         "description": "PC",
         "id": "",
         "host": "192.168.0.10",
@@ -161,7 +162,7 @@ This simple program opens and closes the menu a few times.
         "timeout": 0,
     }
 
-    with samsungctl.Remote(config) as remote:
+    with samsungctl-plus.Remote(config) as remote:
         for i in range(10):
             remote.control("KEY_MENU")
             time.sleep(0.5)
@@ -231,3 +232,4 @@ the only implementation. Here is the list of things that inspired samsungctl.
 - https://github.com/Bntdumas/SamsungIPRemote
 - https://github.com/kyleaa/homebridge-samsungtv2016
 - https://github.com/Ape/samsungctl
+- https://github.com/kdschlosser/samsungctl

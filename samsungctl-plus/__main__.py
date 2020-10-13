@@ -15,7 +15,7 @@ from . import Remote
 
 def _read_config():
     config = collections.defaultdict(lambda: None, {
-        "name": "samsungctl",
+        "name": "samsungctl-plus",
         "description": "PC",
         "id": "",
         "method": "legacy",
@@ -33,7 +33,7 @@ def _read_config():
     directories.append("/etc")
 
     for directory in directories:
-        path = os.path.join(directory, "samsungctl.conf")
+        path = os.path.join(directory, "samsungctl-plus.conf")
         try:
             config_file = open(path)
         except IOError as e:

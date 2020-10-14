@@ -5,18 +5,18 @@ import setuptools
 import samsungctl
 
 setuptools.setup(
-    name=samsungctl_plus.__title__,
-    version=samsungctl_plus.__version__,
-    description=samsungctl_plus.__doc__,
-    url=samsungctl_plus.__url__,
-    author=samsungctl_plus.__author__,
-    author_email=samsungctl_plus.__author_email__,
-    license=samsungctl_plus.__license__,
+    name=samsungctl.__title__,
+    version=samsungctls.__version__,
+    description=samsungctl.__doc__,
+    url=samsungctl.__url__,
+    author=samsungctl.__author__,
+    author_email=samsungctl.__author_email__,
+    license=samsungctl.__license__,
     long_description=open("README.rst").read(),
     entry_points={
-        "console_scripts": ["samsungctl_plus=samsungctl.__main__:main"]
+        "console_scripts": ["samsungctl-plus=samsungctl.__main__:main"]
     },
-    packages=["samsungctl_plus"],
+    packages=["samsungctl-plus"],
     install_requires=[],
     extras_require={
         "websocket": ["websocket-client"],

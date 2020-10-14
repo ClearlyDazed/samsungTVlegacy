@@ -2,7 +2,7 @@
 
 import setuptools
 
-import samsungctl-plus
+import samsungctl
 
 setuptools.setup(
     name=samsungctl-plus.__title__,

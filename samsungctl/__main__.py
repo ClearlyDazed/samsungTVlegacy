@@ -33,7 +33,7 @@ def _read_config():
     directories.append("/etc")
 
     for directory in directories:
-        path = os.path.join(directory, "samsungctl-plus.conf")
+        path = os.path.join(directory, "samsungctl.conf")
         try:
             config_file = open(path)
         except IOError as e:

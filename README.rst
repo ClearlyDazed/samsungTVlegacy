@@ -2,11 +2,11 @@ Forked from Ape/samsungctl github
 
 With additional mapping of key codes from kdschlosser/samsungctl github
 
-==========
-samsungctl-plus
-==========
+==============
+samsungctlPLUS
+==============
 
-samsungctl-plus is a library and a command line tool for remote controlling Samsung
+samsungctlPLUS is a library and a command line tool for remote controlling Samsung
 televisions via a TCP/IP connection. It currently supports both pre-2016 TVs as
 well most of the modern Tizen-OS TVs with Ethernet or Wi-Fi connectivity.
 
@@ -24,7 +24,7 @@ samsungctl-plus can be installed using `pip <(https://pip.pypa.io/>`_:
 
 ::
 
-    # pip install samsungctl-plus
+    # pip install samsungctlPLUS
 
 Alternatively you can clone the Git repository and run:
 
@@ -36,16 +36,16 @@ It's possible to use the command line tool without installation:
 
 ::
 
-    $ python -m samsungctl-plus
+    $ python -m samsungctlPLUS
 
 Command line usage
 ==================
 
-You can use ``samsungctl-plus`` command to send keys to a TV:
+You can use ``samsungctlPLUS`` command to send keys to a TV:
 
 ::
 
-    $ samsungctl-plus --host <host> [options] <key> [key ...]
+    $ samsungctlPLUS --host <host> [options] <key> [key ...]
 
 ``host`` is the hostname or IP address of the TV. ``key`` is a key code, e.g.
 ``KEY_VOLDOWN``. See `Key codes`_.
@@ -54,14 +54,14 @@ There is also an interactive mode (ncurses) for sending the key presses:
 
 ::
 
-    $ samsungctl-plus --host <host> [options] --interactive
+    $ samsungctlPLUS --host <host> [options] --interactive
 
-Use ``samsungctl-plus --help`` for more information about the command line
+Use ``samsungctlPLUS --help`` for more information about the command line
 arguments:
 
 ::
 
-    usage: samsungctl-plus [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
+    usage: samsungctlPLUS [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
                            [--method METHOD] [--name NAME] [--description DESC]
                            [--id ID] [--timeout TIMEOUT]
                            [key [key ...]]
@@ -85,28 +85,28 @@ arguments:
       --id ID             remote control id
       --timeout TIMEOUT   socket timeout in seconds (0 = no timeout)
 
-    E.g. samsungctl-plus --host 192.168.0.10 --name myremote KEY_VOLDOWN
+    E.g. samsungctlPLUS --host 192.168.0.10 --name myremote KEY_VOLDOWN
 
 The settings can be loaded from a configuration file. The file is searched from
-``$XDG_CONFIG_HOME/samsungctl-plus.conf``, ``~/.config/samsungctl-plus.conf``, and
-``/etc/samsungctl-plus.conf`` in this order. A simple default configuration is
-bundled with the source as `samsungctl-plus.conf <samsungctl-plus.conf>`_.
+``$XDG_CONFIG_HOME/samsungctl.conf``, ``~/.config/samsungctl.conf``, and
+``/etc/samsungctl.conf`` in this order. A simple default configuration is
+bundled with the source as `samsungctl.conf <samsungctl.conf>`_.
 
 Library usage
 =============
 
-samsungctl-plus can be imported as a Python 3 library:
+samsungctlPLUS can be imported as a Python 3 library:
 
 .. code-block:: python
 
-    import samsungctl-plus
+    import samsungctlPLUS
 
 A context managed remote controller object of class ``Remote`` can be
 constructed using the ``with`` statement:
 
 .. code-block:: python
 
-    with samsungctl-plus.Remote(config) as remote:
+    with samsungctlPLUS.Remote(config) as remote:
         # Use the remote object
 
 The constructor takes a configuration dictionary as a parameter. All
@@ -150,11 +150,11 @@ This simple program opens and closes the menu a few times.
 
     #!/usr/bin/env python3
 
-    import samsungctl-plus
+    import samsungctlPLUS
     import time
 
     config = {
-        "name": "samsungctl-plus",
+        "name": "samsungctlPLUS",
         "description": "PC",
         "id": "",
         "host": "192.168.0.10",
@@ -163,7 +163,7 @@ This simple program opens and closes the menu a few times.
         "timeout": 0,
     }
 
-    with samsungctl-plus.Remote(config) as remote:
+    with samsungctlPLUS.Remote(config) as remote:
         for i in range(10):
             remote.control("KEY_MENU")
             time.sleep(0.5)

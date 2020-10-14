@@ -14,7 +14,7 @@ setuptools.setup(
     license=samsungctl-plus.__license__,
     long_description=open("README.rst").read(),
     entry_points={
-        "console_scripts": ["samsungctl-plus=samsungctl-plus.__main__:main"]
+        "console_scripts": ["samsungctl-plus=samsungctl.__main__:main"]
     },
     packages=["samsungctl-plus"],
     install_requires=[],

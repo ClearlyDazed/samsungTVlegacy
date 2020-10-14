@@ -6,7 +6,7 @@ import samsungctl
 
 setuptools.setup(
     name=samsungctl.__title__,
-    version=samsungctls.__version__,
+    version=samsungctl.__version__,
     description=samsungctl.__doc__,
     url=samsungctl.__url__,
     author=samsungctl.__author__,

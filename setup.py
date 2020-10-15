@@ -16,7 +16,7 @@ setuptools.setup(
     entry_points={
         "console_scripts": ["samsungctlPLUS=samsungctl.__main__:main"]
     },
-    packages=["samsungctlPLUS"],
+    packages=["samsungctl"],
     install_requires=[],
     extras_require={
         "websocket": ["websocket-client"],

@@ -1,5 +1,6 @@
 Forked from Ape/samsungctl github to use for F series TV
 Added extra time for time_interval to process string of key codes
+
 ==============
 samsungctl-F
 ==============

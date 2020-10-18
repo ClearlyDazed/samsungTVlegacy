@@ -1,4 +1,5 @@
-Forked from Ape/samsungctl github to use for F series TV
+Forked from Ape/samsungctl github for use with legacy F series TV
+
 Added extra time for time_interval to process string of key codes
 
 ==============

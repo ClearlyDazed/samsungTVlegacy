@@ -15,7 +15,7 @@ from . import Remote
 
 def _read_config():
     config = collections.defaultdict(lambda: None, {
-        "name": "samsunglegacy",
+        "name": "samsungTVlegacy",
         "description": "PC",
         "id": "",
         "method": "legacy",

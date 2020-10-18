@@ -1,6 +1,6 @@
 Forked from Ape/samsungctl github for use with legacy series TV.
-In my case a F series (2013) Samsung TV
 
+In my case a F series (2013) Samsung TV.
 Added extra time for time_interval to process string of key codes
 
 =================

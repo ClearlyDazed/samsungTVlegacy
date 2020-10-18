@@ -51,7 +51,7 @@ You can use ``samsungctl_legacy`` command to send keys to a TV:
 ``host`` is the hostname or IP address of the TV. ``key`` is a key code, e.g.
 ``KEY_VOLDOWN``. See `Key codes`_.
 
-There is also an interactive mode (ncurses) for sending the key presses, to check what key codes are available for our TV:
+There is also an interactive mode (ncurses) for sending the key presses, to check what key codes are available for your TV:
 
 ::
 

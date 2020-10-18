@@ -39,13 +39,6 @@ _mappings = [
     ["9",             "KEY_9",             "9",         "9"],
     ["KEY_F(1)",      "KEY_TV",            "F1",        "TV Source"],
     ["KEY_F(2)",      "KEY_HDMI",          "F2",        "HDMI Source"],
-    ["KEY_F(9)",      "KEY_HDMI1",         "F9",        "HDMI 1 Source"],
-    ["KEY_F(10)",     "KEY_HDMI2",         "F10",       "HDMI 2 Source"],
-    ["KEY_F(11)",     "KEY_HDMI3",         "F11",       "HDMI 3 Source"],
-    ["KEY_F(12)",     "KEY_HDMI4",         "F12",       "HDMI 4 Source"],
-    ["KEY_F(25)",     "KEY_AVI1",          "CTRL+F1",   "AVI 1 Source"],
-    ["KEY_F(26)",     "KEY_AVI2",          "CTRL+F2",   "AVI 2 Source"],
-    ["KEY_F(33)",     "KEY_COMPONENT"      "CTRL+F9",   "Component Source"],
 ]
 
 

@@ -2,21 +2,21 @@
 
 import setuptools
 
-import samsungctl
+import samsungctl_legacy
 
 setuptools.setup(
-    name=samsungctl.__title__,
-    version=samsungctl.__version__,
-    description=samsungctl.__doc__,
-    url=samsungctl.__url__,
-    author=samsungctl.__author__,
-    author_email=samsungctl.__author_email__,
-    license=samsungctl.__license__,
+    name=samsungctl_legacy.__title__,
+    version=samsungctl_legacy.__version__,
+    description=samsungctl_legacy.__doc__,
+    url=samsungctl_legacy.__url__,
+    author=samsungctl_legacy.__author__,
+    author_email=samsungctl_legacy.__author_email__,
+    license=samsungctl_legacy.__license__,
     long_description=open("README.rst").read(),
     entry_points={
-        "console_scripts": ["samsungctlPLUS=samsungctl.__main__:main"]
+        "console_scripts": ["samsungctl_legacy=samsungctl_legacy.__main__:main"]
     },
-    packages=["samsungctl"],
+    packages=["samsungctl_legacy"],
     install_requires=[],
     extras_require={
         "websocket": ["websocket-client"],

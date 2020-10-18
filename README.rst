@@ -3,11 +3,11 @@ Forked from Ape/samsungctl github for use with legacy series TV.
 In my case a F series (2013) Samsung TV.
 Added extra time for time_interval to process string of key codes
 
-=================
-samsungctl-legacy
-=================
+=============
+samsunglegacy
+=============
 
-samsungctl-legacy is a library and a command line tool for remote controlling Samsung
+samsunglegacy is a library and a command line tool for remote controlling Samsung
 televisions via a TCP/IP connection. It currently supports both pre-2016 TVs as
 well most of the modern Tizen-OS TVs with Ethernet or Wi-Fi connectivity.
 
@@ -21,11 +21,11 @@ Dependencies
 Installation
 ============
 
-samsungctl-legacy can be installed using `pip <(https://pip.pypa.io/>`_:
+samsunglegacy can be installed using `pip <(https://pip.pypa.io/>`_:
 
 ::
 
-    # pip install samsungctl-legacy
+    # pip install samsunglegacy
 
 Alternatively you can clone the Git repository and run:
 
@@ -37,16 +37,16 @@ It's possible to use the command line tool without installation:
 
 ::
 
-    $ python -m samsungctl-legacy
+    $ python -m samsunglegacy
 
 Command line usage
 ==================
 
-You can use ``samsungctl-legacy`` command to send keys to a TV:
+You can use ``samsunglegacy`` command to send keys to a TV:
 
 ::
 
-    $ samsungctl-legacy --host <host> [options] <key> [key ...]
+    $ samsunglegacy --host <host> [options] <key> [key ...]
 
 ``host`` is the hostname or IP address of the TV. ``key`` is a key code, e.g.
 ``KEY_VOLDOWN``. See `Key codes`_.
@@ -55,17 +55,17 @@ There is also an interactive mode (ncurses) for sending the key presses, to chec
 
 ::
 
-    $ samsungctl-legacy --host <host> [options] --interactive
+    $ samsunglegacy --host <host> [options] --interactive
 
-Use ``samsungctl-legacy --help`` for more information about the command line
+Use ``samsunglegacy --help`` for more information about the command line
 arguments:
 
 ::
 
-    usage: samsungctl-legacy [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
-                             [--method METHOD] [--name NAME] [--description DESC]
-                             [--id ID] [--timeout TIMEOUT]
-                             [key [key ...]]
+    usage: samsunglegacy [-h] [--version] [-v] [-q] [-i] [--host HOST] [--port PORT]
+                         [--method METHOD] [--name NAME] [--description DESC]
+                         [--id ID] [--timeout TIMEOUT]
+                         [key [key ...]]
 
     Remote control Samsung televisions via TCP/IP connection
 
@@ -86,7 +86,7 @@ arguments:
       --id ID             remote control id
       --timeout TIMEOUT   socket timeout in seconds (0 = no timeout)
 
-    E.g. samsungctl-legacy --host 192.168.0.10 --name myremote KEY_VOLDOWN
+    E.g. samsunglegacy --host 192.168.0.10 --name myremote KEY_VOLDOWN
 
 The settings can be loaded from a configuration file. The file is searched from
 ``$XDG_CONFIG_HOME/samsungctl_legacy.conf``, ``~/.config/samsungctl_legacy.conf``, and
@@ -96,18 +96,18 @@ bundled with the source as `samsungctl_legacy.conf <samsungctl_legacy.conf>`_.
 Library usage
 =============
 
-samsungctl-legacy can be imported as a Python 3 library:
+samsunglegacy can be imported as a Python 3 library:
 
 .. code-block:: python
 
-    import samsungctl-legacy
+    import samsunglegacy
 
 A context managed remote controller object of class ``Remote`` can be
 constructed using the ``with`` statement:
 
 .. code-block:: python
 
-    with samsungctl_legacy.Remote(config) as remote:
+    with samsunglegacy.Remote(config) as remote:
         # Use the remote object
 
 The constructor takes a configuration dictionary as a parameter. All
@@ -151,11 +151,11 @@ This simple program opens and closes the menu a few times.
 
     #!/usr/bin/env python3
 
-    import samsungctl_legacy
+    import samsunglegacy
     import time
 
     config = {
-        "name": "samsungct-legacy",
+        "name": "samsunglegacy",
         "description": "PC",
         "id": "",
         "host": "192.168.0.10",
@@ -164,7 +164,7 @@ This simple program opens and closes the menu a few times.
         "timeout": 0,
     }
 
-    with samsungctl_legacy.Remote(config) as remote:
+    with samsunglegacy.Remote(config) as remote:
         for i in range(10):
             remote.control("KEY_MENU")
             time.sleep(0.5)

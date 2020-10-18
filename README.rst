@@ -3,9 +3,9 @@ Forked from Ape/samsungctl github for use with legacy series TV.
 In my case a F series (2013) Samsung TV.
 Added extra time for time_interval to process string of key codes
 
-=============
+===============
 samsungTVlegacy
-=============
+===============
 
 samsungTVlegacy is a library and a command line tool for remote controlling Samsung
 televisions via a TCP/IP connection. It currently supports both pre-2016 TVs as

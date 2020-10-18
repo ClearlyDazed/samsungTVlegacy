@@ -57,7 +57,7 @@ class RemoteLegacy():
         self._read_response()
         time.sleep(self._key_interval)
 
-    _key_interval = 0.2
+    _key_interval = 0.4
 
     def _read_response(self, first_time=False):
         header = self.connection.recv(3)

@@ -14,9 +14,9 @@ setuptools.setup(
     license=samsungctl_legacy.__license__,
     long_description=open("README.rst").read(),
     entry_points={
-        "console_scripts": ["samsungctl_legacy=samsungctl_legacy.__main__:main"]
+        "console_scripts": ["samsungctl-legacy=samsungctl_legacy.__main__:main"]
     },
-    packages=["samsungctl_legacy"],
+    packages=["samsungctl-legacy"],
     install_requires=[],
     extras_require={
         "websocket": ["websocket-client"],

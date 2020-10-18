@@ -2,21 +2,21 @@
 
 import setuptools
 
-import samsungctl_legacy
+import samsungTVlegacy
 
 setuptools.setup(
-    name=samsungctl_legacy.__title__,
-    version=samsungctl_legacy.__version__,
-    description=samsungctl_legacy.__doc__,
-    url=samsungctl_legacy.__url__,
-    author=samsungctl_legacy.__author__,
-    author_email=samsungctl_legacy.__author_email__,
-    license=samsungctl_legacy.__license__,
+    name=samsungTVlegacy.__title__,
+    version=samsungTVlegacy.__version__,
+    description=samsungTVlegacy.__doc__,
+    url=samsungTVlegacy.__url__,
+    author=samsungTVlegacy.__author__,
+    author_email=samsungTVlegacy.__author_email__,
+    license=samsungTVlegacy.__license__,
     long_description=open("README.rst").read(),
     entry_points={
-        "console_scripts": ["samsunglegacy=samsungctl_legacy.__main__:main"]
+        "console_scripts": ["samsungTVlegacy=samsungTVlegacy.__main__:main"]
     },
-    packages=["samsunglegacy"],
+    packages=["samsungTVlegacy"],
     install_requires=[],
     extras_require={
         "websocket": ["websocket-client"],

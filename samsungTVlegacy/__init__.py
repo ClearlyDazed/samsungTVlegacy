@@ -2,9 +2,9 @@
 
 from .remote import Remote
 
-__title__ = "samsunglegacy"
-__version__ = "0.1.3"
-__url__ = "https://github.com/ClearlyDazed/samsunglegacy"
+__title__ = "samsungTVlegacy"
+__version__ = "0.1.0"
+__url__ = "https://github.com/ClearlyDazed/samsungTVlegacy"
 __author__ = "originally Lauri Niskanen"
 __author_email__ = "ape@ape3000.com"
 __license__ = "MIT"

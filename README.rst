@@ -21,7 +21,7 @@ Dependencies
 Installation
 ============
 
-samsungTVlegacy can be installed using `pip <(https://pip.pypa.io/>`_:
+samsungTVlegacy can be installed using `pip <(https://pip.pypa.io/>`:
 
 ::
 

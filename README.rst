@@ -213,7 +213,7 @@ KEY_6              6
 KEY_7              7
 KEY_8              8
 KEY_9              9
-KEY_TV             TV Source
+KEY_DTV            TV Source
 KEY_HDMI           HDMI Source
 =================  ============
 
